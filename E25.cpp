@@ -3,6 +3,7 @@ using namespace std;
 int main (){
     int a,b,c,d,x=0;
     while(x<=3){
+        
         if (x == 0){
             cout << "Inserte el "<< x + 1 << " numero : "; cin >> a;
         }
@@ -17,12 +18,14 @@ int main (){
         }
         x = x + 1;
     }
+    
+   
+   
     if (a == b || a == c || a == d ){
         cout << "Hay numeros iguales " << endl;
     } else {
         cout << "Ningun numero es igual" << endl;
     }
-    cout << "La vida es dolorosa "<< endl;
-    cout << "La vida no es dolorosa "<< endl;
+
     return 0;
 }
