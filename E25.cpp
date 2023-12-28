@@ -23,5 +23,6 @@ int main (){
         cout << "Ningun numero es igual" << endl;
     }
     cout << "La vida es dolorosa "<< endl;
+    cout << "La vida no es dolorosa "<< endl;
     return 0;
 }
