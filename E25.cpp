@@ -22,5 +22,6 @@ int main (){
     } else {
         cout << "Ningun numero es igual" << endl;
     }
+    cout << "La vida es dolorosa "<< endl;
     return 0;
 }
