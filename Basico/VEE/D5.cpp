@@ -1,56 +1,53 @@
-#include<iostream>
-using namespace std;
-void lec(int &x);
-void ope(int x, int d, int re[]);
-void pro(int re[], int x, int d);
-void prex(int re[], int x,int d, int f);
+/*
+ Desarrolle un algoritmo en pseudocódigo para que lea 3 números enteros positivos de un 
+digito validados y se desea mostrar de menor a mayor los números que se puedan formar en
+tres variables con los tres dígitos juntos introducidos por teclado.
+*/
 
-int main() {
-	int d,x;
-	lec(x);
-	int *re = new int[x];
-	d = 0;
-	cout << "INSERTE NUMEROS CON 2 DIGITOS" << endl;
-	ope(x,d,re);
-	pro(re,x,d);
+#include <iostream>
+using namespace std;
+void leer(string m , int &x);
+void proceso(int a, int b, int c );
+int main (){
+	int a,b,c;
+	leer("Inserte el Primer Numero : ",a);
+	leer("Inserte el Segundo Numero : ",b);
+	leer("Inserte el Tercer Numero : ",c);
+	cout << "El orden de los numeros de mayor a menor es : " << endl;
+	proceso(a,b,c);
 	return 0;
 }
 
-void lec(int &x) {
-	cout << "INSERTE LA CANTIDAD DE INDICES DEL VECTOR" << endl;
-	cin >> x;
-	if (x<=0) {
-		lec(x);
+
+void leer(string m, int &x){
+	cout << m ; cin >> x;
+	if (x <= 0){
+		cout << "\nEl numero debe de ser un entero positivo. "<< endl;
+		leer(m,x);
 	}
 }
 
-void ope(int x, int d, int re[]) {
-	int n;
-	if (x!=0) {
-		do {
-			cout << "INSERTE EL " << d+1 << "° NUMERO" << endl;
-			cin >> n;
-		} while (!(n>9 && n<100));
-		re[d] = n;
-		ope(x-1,d+1,re);
+void proceso(int a,int b, int c){
+	if(7<1){
+		cout << "11111111111fdasasdf"<< endl;
+	}
+	if (a > b && a > c ){
+		if (b > c){
+			cout << a << ", " << b << ", " << c << endl;
+		}else{
+			cout << c << ", " << b << endl;
+		}
+	}else if (b > a && b > c ){
+		if (a > c ){
+			cout << b << ", " << a << ", " << c << endl;
+		}else {
+			cout << b << ", " << c << ", " << a << endl;
+		}
+	}else if (c > a && c > b ){
+		if (b > a ){
+			cout << c << ", " << b << ", " << a << endl;
+		}else {
+			cout << c << ", " << a << ", " << b << endl;
+		}
 	}
 }
-
-void pro(int re[], int x, int d) {
-	int f;
-	for (d=0;d<=x-1;d++) {
-		cout << d+1 << ")  [" << re[d] << "]" << endl;
-	}
-	cout << "LOS ELEMENTOS DEL VECTOR AL REVES " << endl;
-	d = 0;
-	f = x-1;
-	prex(re,x,d,f);
-}
-
-void prex(int re[],int x,int d, int f) {
-	if (x!=d) {
-		cout << f+1 << ")   [" << re[f] << "]" << endl;
-		prex(re,x-1,d,f-1);
-	}
-}
-
