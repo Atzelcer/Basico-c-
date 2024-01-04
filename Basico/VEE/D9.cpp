@@ -13,7 +13,7 @@ int main(){
     lectura("Inserte el segunda nota parcial : ",y,p,0);p=y;
     lectura("Inserte el tercera nota parcial : ",z,p,r);
     detector(x,y,z);
-    cout << "~~~~~~~~~~~~~~~~~~~~~~324234121324~~~"<< endl;
+    cout << "~~~~~~~~~~~~~~~~~~~~~~324234121324de las otras 2 notas es ==>~~~"<< endl;
     return 0;
 }
 
